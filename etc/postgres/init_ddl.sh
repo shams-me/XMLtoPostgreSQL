@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+while ! pg_isready -U $POSTGRES_USER -d $POSTGRES_DB; do
+  sleep 1
+done
+
+psql -U $POSTGRES_USER -d $POSTGRES_DB -f /etc/app/database.ddl
