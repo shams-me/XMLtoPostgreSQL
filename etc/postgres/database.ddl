@@ -1,7 +1,7 @@
--- Create the content schema if it doesn't exist
+-- Create the public schema if it doesn't exist
 CREATE SCHEMA IF NOT EXISTS public;
 
--- Create the film_work table
+-- Create the sku table
 CREATE TABLE IF NOT EXISTS public.sku
 (
     uuid                   UUID PRIMARY KEY,
