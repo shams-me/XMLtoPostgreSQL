@@ -70,7 +70,7 @@ class XMLExtractor:
             category_tag (str): The XML tag for categories.
 
         Yields:
-            Generator[List[Category], None, None]: A generator that yields batches of categories.
+            Generator[List[type[BaseModel]], None, None]: A generator that yields batches of categories.
         """
         categories = self.extract_categories(main_tag=category_main_tag, tag=category_tag)
         batch = []
