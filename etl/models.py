@@ -3,13 +3,6 @@ from uuid import UUID
 
 from pydantic import BaseModel, Field
 
-
-class Category(BaseModel):
-    id: int
-    name: str
-    parent_id: int | None
-
-
 class Product(BaseModel):
     uuid: UUID
     marketplace_id: int | None = Field(default=None)
